@@ -5,6 +5,7 @@ import moment from 'moment';
 
 import AppContainer from './components/AppContainer';
 import { getLang } from './electron/ipcRenderer/senders';
+import { initSpellChecker } from './electron/spellChecker';
 import store from './redux/store';
 import './assets/styles/styles.scss';
 
@@ -13,6 +14,9 @@ import './electron/ipcRenderer/listeners';
 
 // Set moment.js language
 moment.locale(getLang());
+
+// Set up spell checker
+initSpellChecker();
 
 // Create 'root' div
 const root = document.createElement('div');

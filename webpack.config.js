@@ -37,5 +37,8 @@ module.exports = {
 			title: 'Mini Diary'
 		})
 	],
+	externals: {
+		electronSpellchecker: 'require("electron-spellchecker")'
+	},
 	target: 'electron-renderer'
 };
